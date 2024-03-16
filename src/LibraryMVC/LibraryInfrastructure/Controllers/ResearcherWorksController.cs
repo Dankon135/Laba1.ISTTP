@@ -54,7 +54,7 @@ namespace LibraryInfrastructure.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ResearcherId,ScientificWorkId,Contribution,CreatedAt")] ResearcherWork researcherWork)
+        public async Task<IActionResult> Create([Bind("ResearcherId,ScientificWorkId,Contribution,CreatedAt")] ResearcherWork researcherWork)
         {
             if (ModelState.IsValid)
             {

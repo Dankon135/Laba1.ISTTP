@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "ContainingType": "LibraryInfrastructure.Controllers.ChartController",
+    "Method": "GetResearcherWorkTimeData",
+    "RelativePath": "api/Chart/ResearcherWorkTimeData",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

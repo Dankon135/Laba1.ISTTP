@@ -13,7 +13,7 @@ public partial class ResearcherWork
 
     public string Contribution { get; set; } = null!;
 
-    public byte[] CreatedAt { get; set; } = null!;
+    public string CreatedAt { get; set; } = null!;
 
     public virtual ICollection<ScientificWork> ScientificWorks { get; set; } = new List<ScientificWork>();
 }
