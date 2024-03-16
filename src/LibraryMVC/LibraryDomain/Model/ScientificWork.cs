@@ -19,9 +19,9 @@ public partial class ScientificWork
 
     public string Field { get; set; } = null!;
 
-    public int PersonnelId { get; set;  }
+    public int PersonnelId { get; set; }
 
     public virtual Personnel Personnel { get; set; } = null!;
 
-    public virtual ResearcherWork? ResearcherWork { get; set; }
+    public virtual ResearcherWork Researcher { get; set; } = null!;
 }

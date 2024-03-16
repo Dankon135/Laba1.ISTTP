@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using LibraryDomain.Model;
-
 namespace LibraryInfrastructure;
+
 public partial class DblibraryContext : DbContext
 {
     public DblibraryContext()
@@ -100,9 +100,7 @@ public partial class DblibraryContext : DbContext
         {
             entity.ToTable("Researcher_Work");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("ID");
+            entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.Contribution)
                 .HasMaxLength(50)
                 .IsUnicode(false);
@@ -112,11 +110,6 @@ public partial class DblibraryContext : DbContext
                 .HasColumnName("Created_At");
             entity.Property(e => e.ResearcherId).HasColumnName("Researcher_ID");
             entity.Property(e => e.ScientificWorkId).HasColumnName("Scientific_Work_ID");
-
-            entity.HasOne(d => d.IdNavigation).WithOne(p => p.ResearcherWork)
-                .HasForeignKey<ResearcherWork>(d => d.Id)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Researcher_Work_Scientific_Works1");
         });
 
         modelBuilder.Entity<ScientificWork>(entity =>
@@ -145,6 +138,11 @@ public partial class DblibraryContext : DbContext
 
             entity.HasOne(d => d.Personnel).WithMany(p => p.ScientificWorks)
                 .HasForeignKey(d => d.PersonnelId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Scientific_Works_Personnel1");
+
+            entity.HasOne(d => d.Researcher).WithMany(p => p.ScientificWorks)
+                .HasForeignKey(d => d.ResearcherId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Scientific_Works_Personnel");
         });

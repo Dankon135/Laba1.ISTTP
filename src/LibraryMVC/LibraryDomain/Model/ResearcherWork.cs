@@ -15,5 +15,5 @@ public partial class ResearcherWork
 
     public byte[] CreatedAt { get; set; } = null!;
 
-    public virtual ScientificWork IdNavigation { get; set; } = null!;
+    public virtual ICollection<ScientificWork> ScientificWorks { get; set; } = new List<ScientificWork>();
 }

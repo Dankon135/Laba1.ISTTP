@@ -22,8 +22,7 @@ namespace LibraryInfrastructure.Controllers
         // GET: ResearcherWorks
         public async Task<IActionResult> Index()
         {
-            var dblibraryContext = _context.ResearcherWorks.Include(r => r.IdNavigation);
-            return View(await dblibraryContext.ToListAsync());
+            return View(await _context.ResearcherWorks.ToListAsync());
         }
 
         // GET: ResearcherWorks/Details/5
@@ -35,7 +34,6 @@ namespace LibraryInfrastructure.Controllers
             }
 
             var researcherWork = await _context.ResearcherWorks
-                .Include(r => r.IdNavigation)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (researcherWork == null)
             {
@@ -48,7 +46,6 @@ namespace LibraryInfrastructure.Controllers
         // GET: ResearcherWorks/Create
         public IActionResult Create()
         {
-            ViewData["Id"] = new SelectList(_context.ScientificWorks, "Id", "Client");
             return View();
         }
 
@@ -65,7 +62,6 @@ namespace LibraryInfrastructure.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["Id"] = new SelectList(_context.ScientificWorks, "Id", "Client", researcherWork.Id);
             return View(researcherWork);
         }
 
@@ -82,7 +78,6 @@ namespace LibraryInfrastructure.Controllers
             {
                 return NotFound();
             }
-            ViewData["Id"] = new SelectList(_context.ScientificWorks, "Id", "Client", researcherWork.Id);
             return View(researcherWork);
         }
 
@@ -118,7 +113,6 @@ namespace LibraryInfrastructure.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["Id"] = new SelectList(_context.ScientificWorks, "Id", "Client", researcherWork.Id);
             return View(researcherWork);
         }
 
@@ -131,7 +125,6 @@ namespace LibraryInfrastructure.Controllers
             }
 
             var researcherWork = await _context.ResearcherWorks
-                .Include(r => r.IdNavigation)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (researcherWork == null)
             {

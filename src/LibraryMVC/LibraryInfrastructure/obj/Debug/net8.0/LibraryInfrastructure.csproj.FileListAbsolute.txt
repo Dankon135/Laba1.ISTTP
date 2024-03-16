@@ -421,6 +421,7 @@ C:\Project\ISadnTPBIG\src\LibraryMVC\LibraryInfrastructure\obj\Debug\net8.0\Libr
 C:\Project\ISadnTPBIG\src\LibraryMVC\LibraryInfrastructure\obj\Debug\net8.0\LibraryInfrastructure.MvcApplicationPartsAssemblyInfo.cache
 C:\Project\ISadnTPBIG\src\LibraryMVC\LibraryInfrastructure\obj\Debug\net8.0\LibraryInfrastructure.RazorAssemblyInfo.cache
 C:\Project\ISadnTPBIG\src\LibraryMVC\LibraryInfrastructure\obj\Debug\net8.0\LibraryInfrastructure.RazorAssemblyInfo.cs
+C:\Project\ISadnTPBIG\src\LibraryMVC\LibraryInfrastructure\obj\Debug\net8.0\LibraryInfrastructure.sourcelink.json
 C:\Project\ISadnTPBIG\src\LibraryMVC\LibraryInfrastructure\obj\Debug\net8.0\staticwebassets.build.json
 C:\Project\ISadnTPBIG\src\LibraryMVC\LibraryInfrastructure\obj\Debug\net8.0\staticwebassets.development.json
 C:\Project\ISadnTPBIG\src\LibraryMVC\LibraryInfrastructure\obj\Debug\net8.0\staticwebassets\msbuild.LibraryInfrastructure.Microsoft.AspNetCore.StaticWebAssets.props
@@ -437,7 +438,6 @@ C:\Project\ISadnTPBIG\src\LibraryMVC\LibraryInfrastructure\obj\Debug\net8.0\refi
 C:\Project\ISadnTPBIG\src\LibraryMVC\LibraryInfrastructure\obj\Debug\net8.0\LibraryInfrastructure.pdb
 C:\Project\ISadnTPBIG\src\LibraryMVC\LibraryInfrastructure\obj\Debug\net8.0\LibraryInfrastructure.genruntimeconfig.cache
 C:\Project\ISadnTPBIG\src\LibraryMVC\LibraryInfrastructure\obj\Debug\net8.0\ref\LibraryInfrastructure.dll
-C:\Project\ISadnTPBIG\src\LibraryMVC\LibraryInfrastructure\obj\Debug\net8.0\LibraryInfrastructure.sourcelink.json
 C:\Project\ISadnTPBIG\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\Microsoft.Build.dll
 C:\Project\ISadnTPBIG\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\Microsoft.Build.Framework.dll
 C:\Project\ISadnTPBIG\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
