@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace LibraryDomain.Model;
 
-public partial class ScientificWork: Entity
+public partial class ScientificWork
 {
     public int Id { get; set; }
 
@@ -19,7 +19,7 @@ public partial class ScientificWork: Entity
 
     public string Field { get; set; } = null!;
 
-    public int PersonnelId { get; set; }
+    public int PersonnelId { get; set;  }
 
     public virtual Personnel Personnel { get; set; } = null!;
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace LibraryDomain.Model;
 
-public partial class ResearcherWork: Entity
+public partial class ResearcherWork
 {
     public int Id { get; set; }
 
