@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using LibraryDomain.Model;
+
 namespace LibraryInfrastructure;
 
 public partial class DblibraryContext : DbContext
@@ -104,10 +105,7 @@ public partial class DblibraryContext : DbContext
             entity.Property(e => e.Contribution)
                 .HasMaxLength(50)
                 .IsUnicode(false);
-            entity.Property(e => e.CreatedAt)
-                .IsRowVersion()
-                .IsConcurrencyToken()
-                .HasColumnName("Created_At");
+            entity.Property(e => e.CreatedAt).HasColumnName("Created_At");
             entity.Property(e => e.ResearcherId).HasColumnName("Researcher_ID");
             entity.Property(e => e.ScientificWorkId).HasColumnName("Scientific_Work_ID");
         });

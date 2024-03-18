@@ -54,9 +54,8 @@ namespace LibraryInfrastructure.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ResearcherId,ScientificWorkId,Contribution,CreatedAt")] ResearcherWork researcherWork)
+        public async Task<IActionResult> Create([Bind("Id,ResearcherId,ScientificWorkId,Contribution,CreatedAt")] ResearcherWork researcherWork)
         {
-            Console.WriteLine(researcherWork);
             if (ModelState.IsValid)
             {
                 _context.Add(researcherWork);
@@ -89,23 +88,19 @@ namespace LibraryInfrastructure.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,ResearcherId,ScientificWorkId,Contribution,CreatedAt")] ResearcherWork researcherWork)
         {
-            
             if (id != researcherWork.Id)
-
             {
                 return NotFound();
             }
-            Console.WriteLine(ModelState.IsValid);
+
             if (ModelState.IsValid)
             {
-                
                 try
                 {
-                    
                     _context.Update(researcherWork);
                     await _context.SaveChangesAsync();
                 }
-                catch (DbUpdateConcurrencyException e)  
+                catch (DbUpdateConcurrencyException)
                 {
                     if (!ResearcherWorkExists(researcherWork.Id))
                     {
@@ -113,8 +108,7 @@ namespace LibraryInfrastructure.Controllers
                     }
                     else
                     {
-                        Console.WriteLine(e);
-                        throw; 
+                        throw;
                     }
                 }
                 return RedirectToAction(nameof(Index));

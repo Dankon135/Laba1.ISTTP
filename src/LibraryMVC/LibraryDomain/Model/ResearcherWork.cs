@@ -13,7 +13,7 @@ public partial class ResearcherWork
 
     public string Contribution { get; set; } = null!;
 
-    public DateOnly CreatedAt { get; set; } 
+    public DateOnly CreatedAt { get; set; }
 
     public virtual ICollection<ScientificWork> ScientificWorks { get; set; } = new List<ScientificWork>();
 }
