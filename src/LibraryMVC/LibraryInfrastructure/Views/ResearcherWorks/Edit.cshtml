@@ -13,6 +13,7 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="CreatedAt" />
             <div class="form-group">
                 <label asp-for="ResearcherId" class="control-label"></label>
                 <input asp-for="ResearcherId" class="form-control" />
@@ -29,7 +30,7 @@
                 <span asp-validation-for="Contribution" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <button type="submit" value="Save" class="btn btn-primary">Save</button>
             </div>
         </form>
     </div>

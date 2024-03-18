@@ -56,6 +56,7 @@ namespace LibraryInfrastructure.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ResearcherId,ScientificWorkId,Contribution,CreatedAt")] ResearcherWork researcherWork)
         {
+            Console.WriteLine(researcherWork);
             if (ModelState.IsValid)
             {
                 _context.Add(researcherWork);
@@ -88,19 +89,23 @@ namespace LibraryInfrastructure.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,ResearcherId,ScientificWorkId,Contribution,CreatedAt")] ResearcherWork researcherWork)
         {
+            
             if (id != researcherWork.Id)
+
             {
                 return NotFound();
             }
-
+            Console.WriteLine(ModelState.IsValid);
             if (ModelState.IsValid)
             {
+                
                 try
                 {
+                    
                     _context.Update(researcherWork);
                     await _context.SaveChangesAsync();
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (DbUpdateConcurrencyException e)  
                 {
                     if (!ResearcherWorkExists(researcherWork.Id))
                     {
@@ -108,7 +113,8 @@ namespace LibraryInfrastructure.Controllers
                     }
                     else
                     {
-                        throw;
+                        Console.WriteLine(e);
+                        throw; 
                     }
                 }
                 return RedirectToAction(nameof(Index));
