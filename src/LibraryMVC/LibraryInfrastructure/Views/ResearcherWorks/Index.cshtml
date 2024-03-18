@@ -1,67 +1,74 @@
 ﻿@model IEnumerable<LibraryDomain.Model.ResearcherWork>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Research Overview";
 }
 
-<h1>Index</h1>
+<h1>@ViewData["Title"]</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ResearcherId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ScientificWorkId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Contribution)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreatedAt)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ResearcherId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ScientificWorkId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Contribution)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CreatedAt)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
 
-<div id="chart_div" style="width: 100%; height: 500px;"></div>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResearcherId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ScientificWorkId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contribution)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedAt)
+                </th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ResearcherId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ScientificWorkId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Contribution)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedAt)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info">Edit</a>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-success">Details</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div id="charts">
+    <div id="time_chart_div" style="width: 49%; height: 500px; display: inline-block;"></div>
+    <div id="contribution_chart_div" style="width: 49%; height: 500px; display: inline-block;"></div>
+</div>
 
 @section Scripts {
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         google.charts.load('current', { 'packages': ['corechart'] });
-        google.charts.setOnLoadCallback(drawChart);
+        google.charts.setOnLoadCallback(drawTimeChart);
+        google.charts.setOnLoadCallback(drawContributionChart);
 
-        function drawChart() {
+        function drawTimeChart() {
             $.ajax({
                 url: '/api/Chart/ResearcherWorkTimeData',
                 type: 'GET',
@@ -69,24 +76,146 @@
                 success: function (data) {
                     var dataArray = [['Date', 'Count']];
                     data.forEach(function (item) {
-                        dataArray.push([item.date, item.count]);
+                        dataArray.push([item.date.toString(), item.count]);
                     });
 
-                    var data = google.visualization.arrayToDataTable(dataArray);
+                    var chartData = google.visualization.arrayToDataTable(dataArray);
 
                     var options = {
-                        title: 'Research Work Contributions Over Time',
-                        pieHole: 0.4, // Creates a donut chart
+                        title: 'Research Work Time Distribution',
+                        titleTextStyle: {
+                            color: '#2c3e50',
+                            fontSize: 24,
+                            bold: true,
+                            italic: false
+                        },
+                        pieHole: 0.4,
+                        chartArea: {
+                            left: "10%",
+                            top: "10%",
+                            width: '80%',
+                            height: '80%',
+                            backgroundColor: {
+                                fill: '#ecf0f1',
+                                stroke: '#7f8c8d',
+                                strokeWidth: 1
+                            }
+                        },
+                        backgroundColor: '#bdc3c7',
+                        legend: {
+                            position: 'right',
+                            textStyle: {
+                                color: '#34495e',
+                                fontSize: 16
+                            }
+                        },
+                        slices: {
+                            0: { color: '#e74c3c' },
+                            1: { color: '#3498db' },
+                            2: { color: '#2ecc71' },
+                            3: { color: '#f1c40f' },
+                            4: { color: '#9b59b6' },
+                            5: { color: '#34495e' }
+                        },
+                        pieSliceTextStyle: {
+                            color: '#ecf0f1',
+                            bold: true,
+                            fontSize: 16
+                        },
+                        pieSliceBorderColor: '#2c3e50'
+                    };
+
+                    var chart = new google.visualization.PieChart(document.getElementById('time_chart_div'));
+                    chart.draw(chartData, options);
+                },
+                error: function (error) {
+                    console.log("Error loading time chart data: " + error);
+                }
+            });
+        }
+
+
+        function drawContributionChart() {
+            $.ajax({
+                url: '/api/ResearcherWork/Contributions',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    var dataArray = [['Contribution', 'Count']];
+                    data.forEach(function (item) {
+                        dataArray.push([item.contribution, 1]);
+                    });
+
+                    var chartData = google.visualization.arrayToDataTable(dataArray);
+
+                    var options = {
+                        title: 'Researcher Contributions',
+                        pieHole: 0.4,
                         chartArea: { width: '70%', height: '70%' }
                     };
 
-                    var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-                    chart.draw(data, options);
+                    var chart = new google.visualization.PieChart(document.getElementById('contribution_chart_div'));
+                    chart.draw(chartData, options);
                 },
                 error: function (error) {
-                    console.log("Error loading chart data: " + error);
+                    console.log("Error loading contribution chart data: " + error);
                 }
             });
         }
     </script>
 }
+
+<style>
+    .table thead th {
+        position: sticky;
+        top: 0;
+        background-color: #343a40;
+        color: white;
+    }
+
+    .table-responsive {
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        margin: 0 5px;
+    }
+
+    #charts {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+    }
+
+    .btn-info {
+        background-color: #17a2b8;
+    }
+
+    .btn-success {
+        background-color: #28a745;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+    }
+
+    .btn-primary:hover {
+        background-color: #0069d9;
+    }
+
+    .btn-info:hover {
+        background-color: #138496;
+    }
+
+    .btn-success:hover {
+        background-color: #218838;
+    }
+
+    .btn-danger:hover {
+        background-color: #c82333;
+    }
+</style>
