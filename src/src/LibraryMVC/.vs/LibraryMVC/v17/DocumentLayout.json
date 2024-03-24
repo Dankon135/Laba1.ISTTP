@@ -1,0 +1,166 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{813BA7B6-552C-41EE-961F-2E98827A760C}|LibraryInfrastructure\\LibraryInfrastructure.csproj|c:\\project\\isadntpbig\\src\\src\\librarymvc\\libraryinfrastructure\\views\\researcherworks\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{813BA7B6-552C-41EE-961F-2E98827A760C}|LibraryInfrastructure\\LibraryInfrastructure.csproj|solutionrelative:libraryinfrastructure\\views\\researcherworks\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60EB756C-E73B-42DE-8FFA-755AC50FC748}|LibraryDomain\\LibraryDomain.csproj|c:\\project\\isadntpbig\\src\\src\\librarymvc\\librarydomain\\model\\researcherwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60EB756C-E73B-42DE-8FFA-755AC50FC748}|LibraryDomain\\LibraryDomain.csproj|solutionrelative:librarydomain\\model\\researcherwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{813BA7B6-552C-41EE-961F-2E98827A760C}|LibraryInfrastructure\\LibraryInfrastructure.csproj|c:\\project\\isadntpbig\\src\\src\\librarymvc\\libraryinfrastructure\\controllers\\conttitle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{813BA7B6-552C-41EE-961F-2E98827A760C}|LibraryInfrastructure\\LibraryInfrastructure.csproj|solutionrelative:libraryinfrastructure\\controllers\\conttitle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{813BA7B6-552C-41EE-961F-2E98827A760C}|LibraryInfrastructure\\LibraryInfrastructure.csproj|c:\\project\\isadntpbig\\src\\src\\librarymvc\\libraryinfrastructure\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{813BA7B6-552C-41EE-961F-2E98827A760C}|LibraryInfrastructure\\LibraryInfrastructure.csproj|solutionrelative:libraryinfrastructure\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{813BA7B6-552C-41EE-961F-2E98827A760C}|LibraryInfrastructure\\LibraryInfrastructure.csproj|c:\\project\\isadntpbig\\src\\src\\librarymvc\\libraryinfrastructure\\dblibrarycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{813BA7B6-552C-41EE-961F-2E98827A760C}|LibraryInfrastructure\\LibraryInfrastructure.csproj|solutionrelative:libraryinfrastructure\\dblibrarycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{813BA7B6-552C-41EE-961F-2E98827A760C}|LibraryInfrastructure\\LibraryInfrastructure.csproj|c:\\project\\isadntpbig\\src\\src\\librarymvc\\libraryinfrastructure\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{813BA7B6-552C-41EE-961F-2E98827A760C}|LibraryInfrastructure\\LibraryInfrastructure.csproj|solutionrelative:libraryinfrastructure\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{813BA7B6-552C-41EE-961F-2E98827A760C}|LibraryInfrastructure\\LibraryInfrastructure.csproj|c:\\project\\isadntpbig\\src\\src\\librarymvc\\libraryinfrastructure\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{813BA7B6-552C-41EE-961F-2E98827A760C}|LibraryInfrastructure\\LibraryInfrastructure.csproj|solutionrelative:libraryinfrastructure\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{813BA7B6-552C-41EE-961F-2E98827A760C}|LibraryInfrastructure\\LibraryInfrastructure.csproj|c:\\project\\isadntpbig\\src\\src\\librarymvc\\libraryinfrastructure\\controllers\\researcherworkscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{813BA7B6-552C-41EE-961F-2E98827A760C}|LibraryInfrastructure\\LibraryInfrastructure.csproj|solutionrelative:libraryinfrastructure\\controllers\\researcherworkscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{813BA7B6-552C-41EE-961F-2E98827A760C}|LibraryInfrastructure\\LibraryInfrastructure.csproj|c:\\project\\isadntpbig\\src\\src\\librarymvc\\libraryinfrastructure\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{813BA7B6-552C-41EE-961F-2E98827A760C}|LibraryInfrastructure\\LibraryInfrastructure.csproj|solutionrelative:libraryinfrastructure\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryInfrastructure\\Views\\ResearcherWorks\\Index.cshtml",
+              "RelativeDocumentMoniker": "LibraryInfrastructure\\Views\\ResearcherWorks\\Index.cshtml",
+              "ToolTip": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryInfrastructure\\Views\\ResearcherWorks\\Index.cshtml",
+              "RelativeToolTip": "LibraryInfrastructure\\Views\\ResearcherWorks\\Index.cshtml",
+              "ViewState": "AQIAABQAAAAAAAAAAAAuwC8AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-24T13:26:55.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ContTitle.cs",
+              "DocumentMoniker": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryInfrastructure\\Controllers\\ContTitle.cs",
+              "RelativeDocumentMoniker": "LibraryInfrastructure\\Controllers\\ContTitle.cs",
+              "ToolTip": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryInfrastructure\\Controllers\\ContTitle.cs",
+              "RelativeToolTip": "LibraryInfrastructure\\Controllers\\ContTitle.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T13:25:34.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ResearcherWork.cs",
+              "DocumentMoniker": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryDomain\\Model\\ResearcherWork.cs",
+              "RelativeDocumentMoniker": "LibraryDomain\\Model\\ResearcherWork.cs",
+              "ToolTip": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryDomain\\Model\\ResearcherWork.cs",
+              "RelativeToolTip": "LibraryDomain\\Model\\ResearcherWork.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T13:23:29.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ValuesController.cs",
+              "DocumentMoniker": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryInfrastructure\\Controllers\\ValuesController.cs",
+              "RelativeDocumentMoniker": "LibraryInfrastructure\\Controllers\\ValuesController.cs",
+              "ToolTip": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryInfrastructure\\Controllers\\ValuesController.cs",
+              "RelativeToolTip": "LibraryInfrastructure\\Controllers\\ValuesController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAwCMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T13:22:32.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryInfrastructure\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "LibraryInfrastructure\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryInfrastructure\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "LibraryInfrastructure\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-24T13:20:06.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ResearcherWorksController.cs",
+              "DocumentMoniker": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryInfrastructure\\Controllers\\ResearcherWorksController.cs",
+              "RelativeDocumentMoniker": "LibraryInfrastructure\\Controllers\\ResearcherWorksController.cs",
+              "ToolTip": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryInfrastructure\\Controllers\\ResearcherWorksController.cs",
+              "RelativeToolTip": "LibraryInfrastructure\\Controllers\\ResearcherWorksController.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T11:13:10.182Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryInfrastructure\\Program.cs",
+              "RelativeDocumentMoniker": "LibraryInfrastructure\\Program.cs",
+              "ToolTip": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryInfrastructure\\Program.cs",
+              "RelativeToolTip": "LibraryInfrastructure\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T11:11:10.874Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryInfrastructure\\appsettings.json",
+              "RelativeDocumentMoniker": "LibraryInfrastructure\\appsettings.json",
+              "ToolTip": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryInfrastructure\\appsettings.json",
+              "RelativeToolTip": "LibraryInfrastructure\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-24T11:10:55.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DblibraryContext.cs",
+              "DocumentMoniker": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryInfrastructure\\DblibraryContext.cs",
+              "RelativeDocumentMoniker": "LibraryInfrastructure\\DblibraryContext.cs",
+              "ToolTip": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryInfrastructure\\DblibraryContext.cs",
+              "RelativeToolTip": "LibraryInfrastructure\\DblibraryContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T10:54:53.968Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
