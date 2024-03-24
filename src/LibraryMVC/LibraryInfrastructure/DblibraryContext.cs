@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+
 using LibraryDomain.Model;
-
 namespace LibraryInfrastructure;
-
 public partial class DblibraryContext : DbContext
 {
     public DblibraryContext()
@@ -16,7 +15,7 @@ public partial class DblibraryContext : DbContext
     {
     }
 
-    public virtual DbSet<Department> Departments { get; set; }
+    public virtual DbSet<Departament> Departaments { get; set; }
 
     public virtual DbSet<Laboratory> Laboratories { get; set; }
 
@@ -26,7 +25,7 @@ public partial class DblibraryContext : DbContext
 
     public virtual DbSet<ResearcherWork> ResearcherWorks { get; set; }
 
-    public virtual DbSet<ScientificWork> ScientificWorks { get; set; }
+    public virtual DbSet<ZtTable> ZtTables { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
@@ -34,12 +33,12 @@ public partial class DblibraryContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Department>(entity =>
+        modelBuilder.Entity<Departament>(entity =>
         {
             entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.Name)
-                .HasMaxLength(50)
-                .IsUnicode(false);
+                .HasMaxLength(10)
+                .IsFixedLength();
         });
 
         modelBuilder.Entity<Laboratory>(entity =>
@@ -53,28 +52,27 @@ public partial class DblibraryContext : DbContext
             entity.HasOne(d => d.Departament).WithMany(p => p.Laboratories)
                 .HasForeignKey(d => d.DepartamentId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Laboratories_Departments");
+                .HasConstraintName("FK_Laboratories_Departaments");
         });
 
         modelBuilder.Entity<Personnel>(entity =>
         {
-            entity.Property(e => e.Id)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("ID");
+            entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.DepartamentId).HasColumnName("Departament_ID");
             entity.Property(e => e.FullName)
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("Full_Name");
             entity.Property(e => e.LaboratoryId).HasColumnName("Laboratory_ID");
+            entity.Property(e => e.PersonnelId).HasColumnName("Personnel_ID");
             entity.Property(e => e.PositionEnd).HasColumnName("Position_End");
             entity.Property(e => e.PositionId).HasColumnName("Position_ID");
             entity.Property(e => e.PositionStart).HasColumnName("Position_Start");
 
-            entity.HasOne(d => d.IdNavigation).WithOne(p => p.Personnel)
-                .HasForeignKey<Personnel>(d => d.Id)
+            entity.HasOne(d => d.Departament).WithMany(p => p.Personnel)
+                .HasForeignKey(d => d.DepartamentId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Personnel_Departments");
+                .HasConstraintName("FK_Personnel_Departaments");
 
             entity.HasOne(d => d.Laboratory).WithMany(p => p.Personnel)
                 .HasForeignKey(d => d.LaboratoryId)
@@ -106,41 +104,29 @@ public partial class DblibraryContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false);
             entity.Property(e => e.CreatedAt).HasColumnName("Created_At");
-            entity.Property(e => e.ResearcherId).HasColumnName("Researcher_ID");
             entity.Property(e => e.ScientificWorkId).HasColumnName("Scientific_Work_ID");
-        });
-
-        modelBuilder.Entity<ScientificWork>(entity =>
-        {
-            entity.ToTable("Scientific_Works");
-
-            entity.Property(e => e.Id).HasColumnName("ID");
-            entity.Property(e => e.Client)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.ClientAddress)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("Client_Address");
-            entity.Property(e => e.Field)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.PersonnelId).HasColumnName("Personnel_ID");
-            entity.Property(e => e.ResearcherId).HasColumnName("Researcher_ID");
-            entity.Property(e => e.Subordination)
-                .HasMaxLength(50)
-                .IsUnicode(false);
             entity.Property(e => e.Title)
                 .HasMaxLength(50)
                 .IsUnicode(false);
+        });
 
-            entity.HasOne(d => d.Personnel).WithMany(p => p.ScientificWorks)
+        modelBuilder.Entity<ZtTable>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK_Scientific_Works");
+
+            entity.ToTable("ZT_Table");
+
+            entity.Property(e => e.Id).HasColumnName("ID");
+            entity.Property(e => e.PersonnelId).HasColumnName("Personnel_ID");
+            entity.Property(e => e.ScientificWorkId).HasColumnName("Scientific_Work_ID");
+
+            entity.HasOne(d => d.Personnel).WithMany(p => p.ZtTables)
                 .HasForeignKey(d => d.PersonnelId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Scientific_Works_Personnel1");
+                .HasConstraintName("FK_ZT_Table_Personnel");
 
-            entity.HasOne(d => d.Researcher).WithMany(p => p.ScientificWorks)
-                .HasForeignKey(d => d.ResearcherId)
+            entity.HasOne(d => d.PersonnelNavigation).WithMany(p => p.ZtTables)
+                .HasForeignKey(d => d.PersonnelId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Scientific_Works_Personnel");
         });

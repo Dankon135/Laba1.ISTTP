@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace LibraryDomain.Model;
 
-public partial class Department
+public partial class Departament
 {
     public int Id { get; set; }
 
@@ -11,5 +11,5 @@ public partial class Department
 
     public virtual ICollection<Laboratory> Laboratories { get; set; } = new List<Laboratory>();
 
-    public virtual Personnel? Personnel { get; set; }
+    public virtual ICollection<Personnel> Personnel { get; set; } = new List<Personnel>();
 }

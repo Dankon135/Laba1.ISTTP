@@ -7,13 +7,13 @@ public partial class ResearcherWork
 {
     public int Id { get; set; }
 
-    public int ResearcherId { get; set; }
-
     public int ScientificWorkId { get; set; }
 
     public string Contribution { get; set; } = null!;
 
     public DateOnly CreatedAt { get; set; }
 
-    public virtual ICollection<ScientificWork> ScientificWorks { get; set; } = new List<ScientificWork>();
+    public string Title { get; set; } = null!;
+
+    public virtual ICollection<ZtTable> ZtTables { get; set; } = new List<ZtTable>();
 }

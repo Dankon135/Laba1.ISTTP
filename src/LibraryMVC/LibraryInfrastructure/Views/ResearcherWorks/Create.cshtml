@@ -13,11 +13,6 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="ResearcherId" class="control-label"></label>
-                <input asp-for="ResearcherId" class="form-control" />
-                <span asp-validation-for="ResearcherId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="ScientificWorkId" class="control-label"></label>
                 <input asp-for="ScientificWorkId" class="form-control" />
                 <span asp-validation-for="ScientificWorkId" class="text-danger"></span>
@@ -31,6 +26,11 @@
                 <label asp-for="CreatedAt" class="control-label"></label>
                 <input asp-for="CreatedAt" class="form-control" />
                 <span asp-validation-for="CreatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

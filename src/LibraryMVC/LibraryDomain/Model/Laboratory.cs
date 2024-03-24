@@ -11,7 +11,7 @@ public partial class Laboratory
 
     public int DepartamentId { get; set; }
 
-    public virtual Department Departament { get; set; } = null!;
+    public virtual Departament Departament { get; set; } = null!;
 
     public virtual ICollection<Personnel> Personnel { get; set; } = new List<Personnel>();
 }

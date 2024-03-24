@@ -19,11 +19,13 @@ public partial class Personnel
 
     public DateOnly PositionEnd { get; set; }
 
-    public virtual Department IdNavigation { get; set; } = null!;
+    public int PersonnelId { get; set; }
+
+    public virtual Departament Departament { get; set; } = null!;
 
     public virtual Laboratory Laboratory { get; set; } = null!;
 
     public virtual Position Position { get; set; } = null!;
 
-    public virtual ICollection<ScientificWork> ScientificWorks { get; set; } = new List<ScientificWork>();
+    public virtual ICollection<ZtTable> ZtTables { get; set; } = new List<ZtTable>();
 }
