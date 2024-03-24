@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryDomain\\LibraryDomain.csproj",
+      "projectUniqueName": "C:\\Project\\ISadnTPBIG\\src\\LibraryMVC\\LibraryDomain\\LibraryDomain.csproj",
       "projectName": "LibraryDomain",
-      "projectPath": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryDomain\\LibraryDomain.csproj",
+      "projectPath": "C:\\Project\\ISadnTPBIG\\src\\LibraryMVC\\LibraryDomain\\LibraryDomain.csproj",
       "packagesPath": "C:\\Users\\Денис\\.nuget\\packages\\",
-      "outputPath": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryDomain\\obj\\",
+      "outputPath": "C:\\Project\\ISadnTPBIG\\src\\LibraryMVC\\LibraryDomain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Денис\\AppData\\Roaming\\NuGet\\NuGet.Config",

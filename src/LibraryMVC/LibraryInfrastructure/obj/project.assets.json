@@ -8233,11 +8233,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryInfrastructure\\LibraryInfrastructure.csproj",
+      "projectUniqueName": "C:\\Project\\ISadnTPBIG\\src\\LibraryMVC\\LibraryInfrastructure\\LibraryInfrastructure.csproj",
       "projectName": "LibraryInfrastructure",
-      "projectPath": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryInfrastructure\\LibraryInfrastructure.csproj",
+      "projectPath": "C:\\Project\\ISadnTPBIG\\src\\LibraryMVC\\LibraryInfrastructure\\LibraryInfrastructure.csproj",
       "packagesPath": "C:\\Users\\Денис\\.nuget\\packages\\",
-      "outputPath": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryInfrastructure\\obj\\",
+      "outputPath": "C:\\Project\\ISadnTPBIG\\src\\LibraryMVC\\LibraryInfrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Денис\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8254,8 +8254,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryDomain\\LibraryDomain.csproj": {
-              "projectPath": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryDomain\\LibraryDomain.csproj"
+            "C:\\Project\\ISadnTPBIG\\src\\LibraryMVC\\LibraryDomain\\LibraryDomain.csproj": {
+              "projectPath": "C:\\Project\\ISadnTPBIG\\src\\LibraryMVC\\LibraryDomain\\LibraryDomain.csproj"
             }
           }
         }

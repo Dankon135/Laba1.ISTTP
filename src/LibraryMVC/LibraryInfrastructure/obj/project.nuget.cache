@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eNEKGFOLirl2KpJRN1/H5NV29a3k+pCsnYlXSPbE8X5Kyh7Yq9XE3qqEQx4ZwZdVrwlWIAk+3QA5ShD+axmfbQ==",
+  "dgSpecHash": "RQgJDYfEVAzhv3T2gpCfgARUp19Ym8WUf6cSlpjT2PoRWDnXg0DILCQBzT7U8+lGYH27no/WlPmk1U/nMJTOLA==",
   "success": true,
-  "projectFilePath": "C:\\Project\\ISadnTPBIG\\src\\src\\LibraryMVC\\LibraryInfrastructure\\LibraryInfrastructure.csproj",
+  "projectFilePath": "C:\\Project\\ISadnTPBIG\\src\\LibraryMVC\\LibraryInfrastructure\\LibraryInfrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Денис\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Денис\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
