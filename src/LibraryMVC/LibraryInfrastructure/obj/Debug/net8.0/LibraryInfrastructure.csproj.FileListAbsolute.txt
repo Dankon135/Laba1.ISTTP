@@ -1116,3 +1116,10 @@ C:\Project\ISadnTPBIG\src\src\LibraryMVC\LibraryInfrastructure\obj\Debug\net8.0\
 C:\Project\ISadnTPBIG\src\src\LibraryMVC\LibraryInfrastructure\obj\Debug\net8.0\LibraryInfrastructure.pdb
 C:\Project\ISadnTPBIG\src\src\LibraryMVC\LibraryInfrastructure\obj\Debug\net8.0\LibraryInfrastructure.genruntimeconfig.cache
 C:\Project\ISadnTPBIG\src\src\LibraryMVC\LibraryInfrastructure\obj\Debug\net8.0\ref\LibraryInfrastructure.dll
+C:\Project\ISadnTPBIG\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\ClosedXML.dll
+C:\Project\ISadnTPBIG\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+C:\Project\ISadnTPBIG\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\ExcelNumberFormat.dll
+C:\Project\ISadnTPBIG\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\Irony.dll
+C:\Project\ISadnTPBIG\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\SixLabors.Fonts.dll
+C:\Project\ISadnTPBIG\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\System.IO.Packaging.dll
+C:\Project\ISadnTPBIG\src\LibraryMVC\LibraryInfrastructure\bin\Debug\net8.0\XLParser.dll

@@ -6,9 +6,31 @@
 
 <h1>@ViewData["Title"]</h1>
 
+<div>
+    <h3>Оберіть Excel-файл для завантаження в Research Work</h3>
+    @using (Html.BeginForm("Import", "ResearcherWorks", FormMethod.Post, new { enctype = "multipart/form-data", id = "frm-excel" }))
+    {
+        <div>
+            Завантажте Excel-файл:
+            <input type="file" name="fileExcel" id="fileExcel" />
+            <div>
+                <input type="submit" value="Завантажити" />
+            </div>
+        </div>
+    }
+</div>
+<div>
+    <h3>Завантаження інформації в файл</h3>
+    <a asp-action="Export">завантажити</a>
+</div>
+
+
 <p>
-    <a asp-action="Create" class="btn btn-primary">Create New</a>
+    <a asp-action="Create" asp-controller="ResearcherWorks" class="btn btn-primary">Create New Research Work</a>
+    <a asp-action="Create" asp-controller="FULLName" class="btn btn-secondary">Create New Author</a>
 </p>
+
+
 
 <div class="table-responsive">
     <table class="table table-bordered table-hover">

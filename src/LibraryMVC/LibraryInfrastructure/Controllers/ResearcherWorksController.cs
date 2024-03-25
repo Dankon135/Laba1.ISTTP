@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using LibraryDomain.Model;
 using LibraryInfrastructure;
+using ClosedXML.Excel;
 
 namespace LibraryInfrastructure.Controllers
 {
@@ -153,5 +154,81 @@ namespace LibraryInfrastructure.Controllers
         {
             return _context.ResearcherWorks.Any(e => e.Id == id);
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Import(IFormFile fileExcel)
+        {
+            if (ModelState.IsValid)
+            {
+                if (fileExcel != null)
+                {
+                    using (var stream = new MemoryStream())
+                    {
+                        await fileExcel.CopyToAsync(stream);
+                        using (var workBook = new XLWorkbook(stream))
+                        {
+                            var worksheet = workBook.Worksheets.First();
+                            foreach (var row in worksheet.RowsUsed().Skip(1)) // Пропускаем заголовок
+                            {
+                                var researcherWork = new ResearcherWork
+                                {
+                                    ScientificWorkId = int.Parse(row.Cell(1).Value.ToString()),
+                                    Contribution = row.Cell(2).Value.ToString(),
+                                    CreatedAt = DateOnly.FromDateTime(row.Cell(3).GetDateTime()),
+                                    Title = row.Cell(4).Value.ToString()
+                                };
+
+                                _context.ResearcherWorks.Add(researcherWork);
+                            }
+                        }
+                    }
+
+                    await _context.SaveChangesAsync();
+                }
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View();
+        }
+        public async Task<IActionResult> Export()
+        {
+            using (var workbook = new XLWorkbook())
+            {
+                var researcherWorks = await _context.ResearcherWorks.ToListAsync();
+                var worksheet = workbook.Worksheets.Add("ResearcherWorks");
+
+                // Заголовки столбцов
+                worksheet.Cell("A1").Value = "Scientific Work ID";
+                worksheet.Cell("B1").Value = "Contribution";
+                worksheet.Cell("C1").Value = "Created At";
+                worksheet.Cell("D1").Value = "Title";
+
+                worksheet.Row(1).Style.Font.Bold = true;
+
+                int row = 2;
+                foreach (var work in researcherWorks)
+                {
+                    worksheet.Cell(row, 1).Value = work.ScientificWorkId;
+                    worksheet.Cell(row, 2).Value = work.Contribution;
+                    worksheet.Cell(row, 3).Value = work.CreatedAt.ToString();
+                    worksheet.Cell(row, 4).Value = work.Title;
+                    row++;
+                }
+
+                using (var stream = new MemoryStream())
+                {
+                    workbook.SaveAs(stream);
+                    var content = stream.ToArray();
+
+                    return File(content,
+                        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                        "ResearcherWorks.xlsx");
+                }
+            }
+        }
+
+
     }
+
 }
